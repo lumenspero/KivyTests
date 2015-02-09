@@ -1,0 +1,85 @@
+AccountDetailsForm:
+
+<AccountDetailsForm>:
+	anchor_y: "top"
+	servicetag_box: servicetag_input
+	systemtype_box: systemtype_input
+	raidcontroller_box: raidcontroller_input
+	idrac_box: idrac_input
+	harddrive_box: harddrive_input
+	memory_box: memory_input
+
+
+	
+
+	BoxLayout:
+		orientation: "vertical"
+		height: "200dp"
+		size_hint_y: None
+		Label:
+			text: "System Snapshot Ver. 0.1.0"
+			height: "80dp"
+			size_hint_y: None
+		GridLayout:
+			cols: 3
+			row_default_height: "40dp"
+			row_force_default: True
+			spacing: "10dp"
+			padding: "10dp"
+			Label:
+				text: "Service Tag"
+				width: "120dp"
+				size_hint_x: None
+			AccountDetailsTextInput:
+				id: servicetag_input
+				next: systemtype_input
+			Button:
+				size_hint_y: None
+				size_hint_x: None
+				height: "40dp"
+				width: "80dp"
+				text: "Search"
+				on_release: root.search()
+		GridLayout:
+			cols: 2
+			row_default_height: "40dp"
+			row_force_default: True
+			spacing: "10dp"
+			padding: "10dp"
+			Label:
+				text: "System Type"
+				width: "185dp"
+				size_hint_x: None
+			AccountDetailsTextInput:
+				text: ""
+				id: systemtype_input
+				next: raidcontroller_input
+				width: "285dp"
+				size_hint_x: None
+			Label:
+				text: "RAID Controller"
+			AccountDetailsTextInput:
+				text: ""
+				id: raidcontroller_input
+				next: idrac_input
+			Label:
+				text: "iDRAC"
+			AccountDetailsTextInput:
+				text: ""
+				id: idrac_input
+				next: harddrive_input
+			Label:
+				text: "Hard Drive"
+			AccountDetailsTextInput:
+				text: ""
+				id: harddrive_input
+				next: memory_input
+			Label:
+				text: "Memory"
+			AccountDetailsTextInput:
+				text: ""
+				id: memory_input
+				next: servicetag_input
+
+		
+				

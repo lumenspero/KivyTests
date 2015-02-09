@@ -1,0 +1,21 @@
+
+ButtonSearch:
+	servicetag_box: servicetag_input
+	systeminfo_box: systeminfo_input
+	GridLayout:
+		cols: 4
+		
+		Button:
+			id: search_button
+			text: "search"
+			on_press: root.clear()
+			on_release: root.search()
+		TextInput:
+			id: servicetag_input
+			text: ""
+		Label:
+			id: systeminfo_label
+			text: "System Info"
+		TextInput:
+			id: systeminfo_input
+			text: ""
